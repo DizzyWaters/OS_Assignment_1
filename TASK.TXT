@@ -1,0 +1,7 @@
+Task 1. Working with the file system and system registry (total number of 25 points)
+
+ 
+
+Student should develop an application that displays for users the system information like the name and version of the operation system, computer name, the current system and local time, available logical drives, and their characteristics, etc.
+
+The user can select the drive or folder and see the list of the folders and files inside with their characteristics. The application should store some settings. Student should choose how and where to store the settings and justify the choice.
