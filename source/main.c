@@ -1,10 +1,13 @@
 #include <stdio.h>
+// for sysinfo block
 #include <sys/utsname.h>
+// for gatting host block
 #include <unistd.h>
-
-
+// for time block
+#include <time.h>
 int main(int argc, char **argv)
 {
+    // futuren sysinfo module -> probobly with options -> all, specific.
     struct utsname sysinfo;
     if(uname(&sysinfo) == -1)
     {
@@ -16,5 +19,19 @@ int main(int argc, char **argv)
     printf("Release:    %s\n", sysinfo.release);
     printf("Version:    %s\n", sysinfo.version);
     printf("Machine:    %s\n", sysinfo.machine);
+    printf("************ END OF SYSINFO BLOCK **********\n");
+    // time block
+    struct tm* ptr;
+    struct tm* ptr2;
+    ime_t myTime1;
+    time_t myTime2;
+    myTime1 = time(NULL);
+    myTime2 = time(NULL);
+    ptr =  gmtime(&myTime1);
+    ptr2 = localtime(&myTime2);
+    printf("SYSTEM Time is:    %s\n", asctime(ptr));
+    printf("LOCAL Time is:    %s\n", asctime(ptr2));
+    // System Drive Block
+
     return 0;
 }

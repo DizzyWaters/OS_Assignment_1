@@ -38,4 +38,9 @@ FILE *fp = fopen("settings.ini", "w");
 fprintf(fp, "last_folder=/home/user\n");
 fclose(fp);
 
+### TIME ###
 
+resurcees:
+man time
+
+https://www.w3schools.com/c/c_ref_time.php
