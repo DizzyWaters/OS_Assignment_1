@@ -1,0 +1,41 @@
+
+#### HERE WILL BE THE INFORMATION THAT WAS SEARCHED ON INTERNET ALSO WITH HELP OF CHAT-GPT
+
+
+#### C LIBS ####
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/utsname.h>   // uname(): system name, version, release
+#include <unistd.h>        // gethostname(), getlogin()
+#include <time.h>          // time(), localtime(), strftime()
+
+
+
+OS name/version	uname(struct utsname *buf)	<sys/utsname.h>
+Host (computer) name	gethostname(char *name, size_t len)	<unistd.h>
+Current user	getlogin()	<unistd.h>
+System time	time(), localtime(), strftime()	<time.h>
+
+
+#include <sys/statvfs.h>   // statvfs(): filesystem stats
+
+File System Browsing
+Headers:
+
+#include <dirent.h>        // opendir(), readdir(), closedir()
+#include <sys/stat.h>      // stat(): file info
+
+
+Saving Settings
+
+Use standard I/O (<stdio.h>) — simplest and portable.
+
+## example 
+
+FILE *fp = fopen("settings.ini", "w");
+fprintf(fp, "last_folder=/home/user\n");
+fclose(fp);
+
+
