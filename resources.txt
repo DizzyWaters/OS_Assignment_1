@@ -41,6 +41,9 @@ fclose(fp);
 ### TIME ###
 
 resurcees:
-man time
+
+all libs discription can be called as -> man "lib" (example: man time)
+man stat -> for example calles the stat command manual, but man 2 stat -> called the sys/stat.h lib manual
+
 
 https://www.w3schools.com/c/c_ref_time.php

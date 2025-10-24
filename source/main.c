@@ -5,6 +5,10 @@
 #include <unistd.h>
 // for time block
 #include <time.h>
+// stat blocl - drives
+#include <sys/statvfs.h>
+
+
 int main(int argc, char **argv)
 {
     // futuren sysinfo module -> probobly with options -> all, specific.
@@ -21,9 +25,10 @@ int main(int argc, char **argv)
     printf("Machine:    %s\n", sysinfo.machine);
     printf("************ END OF SYSINFO BLOCK **********\n");
     // time block
+    printf("******** This is Time block:\n");
     struct tm* ptr;
     struct tm* ptr2;
-    ime_t myTime1;
+    time_t myTime1;
     time_t myTime2;
     myTime1 = time(NULL);
     myTime2 = time(NULL);
@@ -32,6 +37,8 @@ int main(int argc, char **argv)
     printf("SYSTEM Time is:    %s\n", asctime(ptr));
     printf("LOCAL Time is:    %s\n", asctime(ptr2));
     // System Drive Block
+
+
 
     return 0;
 }
