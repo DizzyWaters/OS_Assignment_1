@@ -16,7 +16,7 @@ void show_menu(void) {
         printf("1. Show system information\n");
         printf("2. Show drives information\n");
         printf("3. Show device stat info\n");
-        printf("4. File system demo\n");
+        printf("4. File system\n");
         printf("0. Exit\n");
         printf("========================================\n");
         printf("Enter your choice: ");
