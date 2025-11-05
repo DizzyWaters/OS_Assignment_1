@@ -26,7 +26,10 @@ static void list_directory(const char *path) {
     printf("----------------------------------\n");
 
     while ((entry = readdir(dir)) != NULL) {
-    snprintf(full_path, sizeof(full_path) - 1, "%s/%s", path, entry->d_name);
+    if(snprintf(full_path, sizeof(full_path), "%s/%s", path, entry->d_name) >= (int)sizeof(full_path))
+    {
+	    fprintf(stderr, "Path too long(%s)\n", entry->d_name);
+    }
     full_path[sizeof(full_path) - 1] = '\0';
 
         if (stat(full_path, &file_stat) == 0) {
